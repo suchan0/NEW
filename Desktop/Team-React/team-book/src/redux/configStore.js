@@ -8,6 +8,7 @@ export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
   user: user,
+  comment: Comment,
   router: connectRouter(history),
 });
 

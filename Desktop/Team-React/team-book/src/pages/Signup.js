@@ -17,10 +17,9 @@ const Signup = (props) => {
 
   const onClickEmailCheck = () => {
     
-    
       axios
-      .post('http://localhost:3003/signup',{
-      "email": id,
+      .post('http://13.124.130.158/user/signup',{
+      "username": id,
     })
         .then((res) => {
           if (id === "") {
@@ -50,7 +49,7 @@ const Signup = (props) => {
       return;
     } else {
       axios
-      .post('http://localhost:3003/signup',{
+      .post('http://13.124.130.158/user/signup',{
       "nickname": user_name,
     })
         .then((res) => {

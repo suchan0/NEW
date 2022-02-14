@@ -27,14 +27,15 @@ const loginAction = (user) => {
   }
 };
 
+
 const signupFB = (id, pwd, user_name) => {
   return function (dispatch, getState, {history}){
     axios
-    .post('http://localhost:3003/signup',{
-      "email": id,
+    .post('http://13.124.130.158/user/signup',{
+      "username": id,
       "nickname": user_name ,
-      "password": pwd,
-      "passwordCheck": pwd
+      "password": pwd
+      
     })
     .then((res) => {
       if (res.data === "성공적으로 회원 가입이 완료 되었습니다.") {
